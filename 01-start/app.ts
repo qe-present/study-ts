@@ -1,11 +1,5 @@
-console.log("Hello World");
-function add(a: number, b: number,c:boolean) {
-    console.log(typeof n1);
-    console.log(c);
+function add(a: number, b: number): number{
     return a + b;
 }
 let n1 = 5;
-let n2 = 2.8;
-let res=true;
-
-console.log(add(n1, n2,res));
+console.log(add(n1, 10)); // Output: 15
