@@ -1,11 +1,14 @@
-function add(a: number, b: number): number{
-    return a + b;
+let useInput:unknown
+// let useInput:any
+let userName:string
+useInput = 5
+useInput = 'hello'
+if(typeof useInput === 'string'){
+    userName = useInput
 }
-function printResult(num: number): void{
-    console.log('Result: ' + num);
+
+function generateError(message:string, code:number):never{
+    throw {message, code}
 }
-function printResult1(num: number): undefined{
-    console.log('Result: ' + num);
-    // return; 可以省略，因为undefined是默认返回类型
-}
-printResult1(add(5, 12));
+let rs=generateError('An error occurred', 500)
+console.log(rs)
