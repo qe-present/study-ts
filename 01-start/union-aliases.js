@@ -1,5 +1,6 @@
+"use strict";
 function combine(a, b, resultConversion) {
-    var result;
+    let result;
     if (typeof a === 'number' || typeof b === 'number' || resultConversion === 'as-number') {
         result = +a + +b;
     }
@@ -13,5 +14,5 @@ function combine(a, b, resultConversion) {
         return result.toString();
     }
 }
-var res = combine('5', '2.8', 'as-text');
+const res = combine('5', '2.8', 'as-text');
 console.log(res);
